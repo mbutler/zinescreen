@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.css" />
         <link rel="stylesheet" type="text/css" href="http://view.jquerymobile.com/1.3.1/dist/demos/_assets/css/jqm-demos.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
-        <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+        <script src="http://code.jquery.com/jquery-1.7.1.js"></script>
         <script src="http://view.jquerymobile.com/1.3.1/dist/demos/_assets/js/index.js"></script>
         <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.js"></script>
     
@@ -40,7 +40,19 @@
                         
                     </div><!-- /header -->
                     <div data-role="content">
-
+                        
+                       <div id="magazine">
+                            <div style="background-image:url(img/poetry-comics/PC_001_Cover.jpg);"></div>
+                            <div style="background-image:url(img/poetry-comics/PC_001_Page_1.jpg);"></div>
+                            <div style="background-image:url(img/poetry-comics/PC_001_Page_2.jpg);"></div>
+                            <div style="background-image:url(img/poetry-comics/PC_001_Page_3.jpg);"></div>
+                            <div style="background-image:url(img/poetry-comics/PC_001_Page_4.jpg);"></div>
+                            <div style="background-image:url(img/poetry-comics/PC_001_Page_5.jpg);"></div>
+                            <div style="background-image:url(img/poetry-comics/PC_001_Page_6.jpg);"></div>
+                            <div style="background-image:url(img/poetry-comics/PC_001_Page_7.jpg);"></div>
+                            <div style="background-image:url(img/poetry-comics/PC_001_Page_8.jpg);"></div>
+                            <div style="background-image:url(img/poetry-comics/PC_001_Page_9.jpg);"></div>
+                        </div>
                         
                     </div><!-- /content -->
                     <div data-role="panel" id="left-panel" data-theme="b">
@@ -54,6 +66,33 @@
 
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script type="text/javascript">
+
+    $(window).ready(function() {
+        $('#magazine').turn({
+                            display: 'double',
+                            acceleration: true,
+                            gradients: !$.isTouch,
+                            elevation:50,
+                            when: {
+                                turned: function(e, page) {
+                                    /*console.log('Current view: ', $(this).turn('view'));*/
+                                }
+                            }
+                        });
+    });
+    
+    
+    $(window).bind('keydown', function(e){
+        
+        if (e.keyCode==37)
+            $('#magazine').turn('previous');
+        else if (e.keyCode==39)
+            $('#magazine').turn('next');
+            
+    });
+
+</script>
 
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

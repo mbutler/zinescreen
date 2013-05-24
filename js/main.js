@@ -10,6 +10,7 @@ $( document ).on( "pageinit", "#demo-page", function() {
                 $( "#left-panel" ).panel( "open" );
             }
         }
-    });
+    });  
 
 });
+

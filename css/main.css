@@ -1110,3 +1110,11 @@ dd { font-size: 1.25em; margin: 1em 0 0; padding-bottom: 1em; border-bottom: 1px
 /*==================================
 turn.js
 ==================================*/
+#magazine{
+    
+    height:600px;
+}
+#magazine .turn-page{
+    background-color:#ccc;
+    background-size:100% 100%;
+}
