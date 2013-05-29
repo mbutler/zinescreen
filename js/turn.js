@@ -87,7 +87,7 @@ var has3d,
 		// forward: Activates both tr and br corners
 		// all: Activates all the corners
 
-		corners: 'forward',
+		corners: 'all',
 		
 		// Size of the active zone of each corner
 
